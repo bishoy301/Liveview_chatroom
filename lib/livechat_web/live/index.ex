@@ -14,6 +14,7 @@ defmodule LivechatWeb.Live.Index do
   end
 
   def fetch(socket, user_name \\ nil) do
+    # Note(bishoy): Can this be done in a better way?
     assign(socket, %{
       user_name: user_name,
       messages: Chat.list_messages(),
@@ -40,6 +41,7 @@ defmodule LivechatWeb.Live.Index do
     end
   end
 
+  # TODO(bishoy): Add more of these functions for handling editing messages and deleting messages if needed
   def handle_info({Chat, [:message, _event_type], _message}, socket) do
     {:noreply, fetch(socket, get_user_name(socket))}
   end
