@@ -17,7 +17,7 @@ config :livechat, LivechatWeb.Endpoint,
   cache_static_manifest: "priv/static/cache_manifest.json",
   server: true,
   root: ".",
-  version: Application.spec(:livechat, :vsn)
+  version: Application.spec(:livechat, :vsn),
   secret_key_base: Map.fetch!(System.get_env(), "SECRET_KEY_BASE")
 
 # Do not print debug messages in production
