@@ -20,6 +20,6 @@
                         'Elixir.Mix.Tasks.Gettext.Extract',
                         'Elixir.Mix.Tasks.Gettext.Merge',gettext_po_parser]},
               {registered,[]},
-              {vsn,"0.16.1"},
+              {vsn,"0.17.0"},
               {env,[{default_locale,<<"en">>}]},
               {mod,{'Elixir.Gettext.Application',[]}}]}.
