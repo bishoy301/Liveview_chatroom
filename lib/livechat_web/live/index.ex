@@ -46,6 +46,7 @@ defmodule LivechatWeb.Live.Index do
     {:noreply, fetch(socket, get_user_name(socket))}
   end
 
+  # Will need to use get_session(conn, :current_user) to get the user name from token rather than make one
   defp get_user_name(socket) do
     socket.assigns
     |> Map.get(:user_name)

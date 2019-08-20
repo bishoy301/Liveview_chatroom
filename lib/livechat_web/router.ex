@@ -18,7 +18,8 @@ defmodule LivechatWeb.Router do
   scope "/", LivechatWeb do
     pipe_through(:browser)
 
-    get("/", ChatController, :index)
+    get("/", PageController, :index)
+    get("/chat", ChatController, :index)
   end
 
   scope "/auth", LivechatWeb do

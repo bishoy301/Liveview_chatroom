@@ -5,7 +5,8 @@ defmodule LivechatWeb.ChatController do
     Phoenix.LiveView.Controller.live_render(
       conn,
       LivechatWeb.Live.Index,
-      session: %{}
+      session: %{},
+      current_user: get_session(conn, :current_user)
     )
   end
 end

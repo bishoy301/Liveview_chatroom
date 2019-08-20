@@ -20,7 +20,7 @@ defmodule Livechat.MixProject do
   def application do
     [
       mod: {Livechat.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :oauth2]
     ]
   end
 
